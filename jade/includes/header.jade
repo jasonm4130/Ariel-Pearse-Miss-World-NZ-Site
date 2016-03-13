@@ -1,16 +1,22 @@
+mixin nav-content()
+  ul
+    li.grow: a(href="#about") About
+    li.grow: a(href="#finalist") 2016 Finalist
+    li.grow: a(href="#checkitout") Check It Out
+    li.grow: a(href="#coverup") Cover Up
+    li.grow: a(href="#fundraisers") Fundraisers
+    li.grow: a(href="#sponsors") Sponsors
+
+.mobile-nav.is-open
+  +nav-content
+
 header
   .header-position
     h1.logo Ariel Pearse
     
     nav.site-nav
-      ul
-        li: a(href="#about") About
-        li: a(href="#finalist") 2016 Finalist
-        li: a(href="#coverup") Cover Up
-        li: a(href="#checkitout") Check It Out
-        li: a(href="#fundraisers") Fundraisers
-        li: a(href="#sponsors") Sponsors
+      +nav-content
         
-      a(href="mailto:arielpearse@gmail.com").email-link +email me
+    a.grow(href="mailto:arielpearse@gmail.com").email-link +email me
 
-  i.fa.fa-bars.fa-2x
+    .mobile-nav-toggle: span
