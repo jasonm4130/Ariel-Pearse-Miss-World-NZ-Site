@@ -1,0 +1,20 @@
+mixin sponsor(img, words, name, url)
+  li.sponsor(style="background-image: url(#{img});")
+    .bubble
+      p #{words}
+      cite - 
+        a(href='#{url}') #{name}
+
+section.sponsors
+  .flex.flex--center
+    .col-1
+      ul.sponsorlist
+        +sponsor("../img/sponsors/2b1-fitness.png","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.","2B1 Fitness", "https://www.facebook.com/2B1Training/")
+        +sponsor("../img/sponsors/blush-baby-logo.png","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.","Blush Baby","http://blushbaby.co.nz/")
+        +sponsor("../img/sponsors/Capability-group-logo.png","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.","Annie Whitley from Capability Group","http://www.capabilitygroup.co.nz/index.php/our-people/annie-whitley-annie-whitley")
+        +sponsor("../img/sponsors/ludus-magnus-logo.png","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.","Ludus Magnus Highbrook","http://www.ludusmagnus.co.nz/")
+        +sponsor("../img/sponsors/Presenters-platform-logo.png","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.","PresentersPlatform","http://presentersplatform.co.nz/")
+           
+    .col-1
+      p.home-lead The people who have made this possible
+      a.home-cta(href="mailto:arielpearse@gmail.com").home-cta Become a sponsor
